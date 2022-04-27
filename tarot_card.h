@@ -5,9 +5,33 @@
 
 #ifndef THE_MYSTIC_COMPUTER_TAROT_CARD_H
 #define THE_MYSTIC_COMPUTER_TAROT_CARD_H
-
+using namespace std;
+#include <iostream>
+#include <string>
 
 class tarot_card {
+public:
+    //tarot_card constructors
+    //will always have a name and definition
+    tarot_card(string, string);
+
+
+    //getters
+    string get_card_meaning();
+    string get_card_name();
+
+
+protected:
+    //setters
+    void set_card_meaning(string);
+    void set_card_name(string);
+    void print_card_data(tarot_card);
+
+private:
+
+    //private variables
+    string card_name;
+    string card_meaning;
 
 };
 

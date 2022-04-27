@@ -4,14 +4,21 @@
 //main.cpp
 
 
-#include <iostream>
+#include <fstream>
+#include <iomanip>
+#include <sstream>
+#include<vector>
 #include<string>
 #include <iostream>
 using namespace std;
+#include "tarot_card.h"
+#include "tarot_deck.h"
 
 
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    tarot_deck deck = tarot_deck("/Users/carolinecanfield/Desktop/card_definitions.txt");
+
+
     return 0;
 }

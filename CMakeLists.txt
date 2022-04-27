@@ -9,4 +9,6 @@ add_executable(The_Mystic_Computer main.cpp
         tarot_deck.h
         tarot_deck.cpp
         tarot_reading.h
-        tarot_reading.cpp)
+        tarot_reading.cpp
+        spread.cpp
+        spread.h)
