@@ -9,6 +9,7 @@ using namespace std;
 #include <iostream>
 #include <string>
 
+
 class tarot_card {
 public:
     //tarot_card constructors

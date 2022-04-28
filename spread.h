@@ -51,7 +51,7 @@ public:
 
     string get_circum();
 
-    string get_pot_solu():
+    string get_pot_solu();
 
     string get_birthday();
 

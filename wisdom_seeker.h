@@ -22,8 +22,11 @@ public:
 
     //functions to figure out the users base card
     string calc_zodiac_sign(int);
+    string calc_birth_day(string, int);
     string suite_base_card();
     string calc_base_card();
+
+
 
     //setters
     void set_seeker_name(string);
@@ -44,7 +47,7 @@ public:
 
 private:
     //variables for the user information
-    string birth_month();
+    string birth_month;
     int birth_day;
     int seeker_age;
     string pref_gender;
@@ -53,7 +56,8 @@ private:
 
 
     //establish functions
-    void est_birthday(string, int);
+    void est_seeker_name(string);
+    void est_birth_day(string, int);
     void est_age(int);
     void est_pref_gender(string);
     void est_sign(string );
