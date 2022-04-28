@@ -15,14 +15,15 @@
 using namespace std;
 #include "wisdom_seeker.h"
 
-//constructor
-//will call the establish functions
-wisdom_seeker::wisdom_seeker(){}
 
-//setters
-void set_birthday(int, int){
-
+void wisdom_seeker::set_age(int age){
+    this -> seeker_age = age;
 }
-void set_age(int);
-void set_pref_gender(string);
-void set_sign(string );
+
+void wisdom_seeker::set_pref_gender(string gen){
+    this -> pref_gender = gen;
+}
+
+void wisdom_seeker::set_sign(string zod){
+    this -> sign = zod;
+}

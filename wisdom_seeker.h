@@ -27,13 +27,15 @@ public:
 
     //setters
     void set_seeker_name(string);
-    void set_birthday(int[]);
+    void set_birth_month(string);
+    void set_birth_day(int);
     void set_age(int);
     void set_pref_gender(string);
     void set_sign(string );
 
     //getters
-    int get_birthday();
+    string get_brith_month();
+    int get_birth_day();
     int get_age();
     string get_pref_gender();
     string get_sign();
@@ -42,15 +44,16 @@ public:
 
 private:
     //variables for the user information
-    int birthday;
-    int age;
+    string birth_month();
+    int birth_day;
+    int seeker_age;
     string pref_gender;
     string sign;
     string seeker_name;
 
 
     //establish functions
-    void est_birthday(string);
+    void est_birthday(string, int);
     void est_age(int);
     void est_pref_gender(string);
     void est_sign(string );
