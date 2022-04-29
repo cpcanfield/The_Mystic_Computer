@@ -147,7 +147,7 @@ tarot_card tarot_deck::calc_base_card(string sign, string gen, int age){
 }
 
 
-static void tarot_deck:: delete_base_card(string sign, string gen, int age) {
+ void tarot_deck:: delete_base_card(string sign, string gen, int age) {
     //calculate the base card
     tarot_card this_base_card = calc_base_card(sign, gen, age);
     //remove the card from the deck
