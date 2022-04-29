@@ -79,9 +79,9 @@ int main() {
         //establish their sign
         string seeking_sign = seeking_wisdom.get_zodiac_sign();
 
-        //remove the base card from the deck
-        tarot_card base_card = calc_base_card(seeking_sign, gender, age);
-        mythical_deck.del(base_card);
+        //establish their base card
+
+
 
 
 

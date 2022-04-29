@@ -15,12 +15,15 @@ public:
     //tarot_card constructors
     //name and definition
     tarot_card(string, string);
+
     //just with a name constructor
     tarot_card(string);
+
     //null constructor
     tarot_card();
 
 
+    tarot_card calc_base_card(string, string, int);
 
 
     //getters
