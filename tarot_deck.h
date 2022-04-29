@@ -20,6 +20,7 @@ using namespace std;
 
 
 class  tarot_deck {
+
 public:
 
    //constructor, reads file, and stores into a vector (i.e the tarot deck)
