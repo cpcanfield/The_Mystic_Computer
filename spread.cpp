@@ -13,3 +13,23 @@
 #include<string>
 using namespace std;
 #include "spread.h"
+
+
+
+//returns the name of the users base card for reading
+string spread::suit_base_card(string sign){
+
+    if(sign == "Cancer" || "Scorpio" || "Pisces"){
+        return "Cups";
+    }
+    if (sign == "Aries" || "Leo" || "Sagittarius") {
+        return "Wands";
+    }
+    if (sign == "Gemini" || "Libra" || "Aquarius") {
+        return "Swords";
+    }
+    if (sign == "Taurus" || "Virgo" || "Capricorn") {
+        return "Pentacles";
+
+    }
+}

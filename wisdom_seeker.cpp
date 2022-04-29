@@ -14,36 +14,87 @@
 #include<string>
 using namespace std;
 #include "wisdom_seeker.h"
+
+
 //null constructor
 wisdom_seeker::wisdom_seeker(){}
+
+
 //constructor
 wisdom_seeker::wisdom_seeker(string name, int month, int day, int age, string gender)
     : seeker_name(name), birth_month(month), birth_day(day), seeker_age(age), pref_gender(gender), zodiac_sign(calc_zodiac_sign())
 {}
 
-//helper functions
-string wisdom_seeker::get_base_card(){
-    string suit = suit_base_card();
 
+
+//setters
+void wisdom_seeker::set_seeker_name(string name){
+    this -> seeker_name = name;
+}
+void wisdom_seeker::set_birth_month(int month){
+    this -> birth_month = month;
+}
+void wisdom_seeker::set_birth_day(int day){
+    this -> birth_day = day;
+}
+void wisdom_seeker::set_age(int age){
+    this -> seeker_age = age;
+}
+void wisdom_seeker::set_pref_gender(string gen){
+    this -> pref_gender = gen;
+}
+void wisdom_seeker::set_sign(string zod){
+    this -> sign = zod;
 }
 
-//returns the name of the users base card for reading
-string wisdom_seeker::suit_base_card(){
-   string find_suit = calc_zodiac_sign();
-   if(find_suit == "Cancer" || "Scorpio" || "Pisces"){
-       return "Cups";
-   }
-       if (find_suit == "Aries" || "Leo" || "Sagittarius") {
-           return "Wands";
-       }
-       if (find_suit == "Gemini" || "Libra" || "Aquarius") {
-           return "Swords";
-       }
-       if (find_suit == "Taurus" || "Virgo" || "Capricorn") {
-           return "Pentacles";
 
-   }
+
+//getters
+int wisdom_seeker::get_birth_month(){
+    return birth_month;
 }
+int wisdom_seeker::get_birth_day(){
+    return birth_day;
+}
+int wisdom_seeker::get_age(){
+    return seeker_age;
+}
+string wisdom_seeker::get_pref_gender(){
+    return pref_gender;
+}
+string wisdom_seeker::get_sign(){
+    return sign;
+}
+string wisdom_seeker::get_seeker_name(){
+    return seeker_name;
+}
+string wisdom_seeker::get_zodiac_sign(){
+    return zodiac_sign;
+}
+
+
+//establish functions
+void wisdom_seeker::est_birth_day(int month, int day){
+    set_birth_month(month);
+    set_birth_day(day);
+}
+
+void wisdom_seeker::est_age(int age){
+    set_age(age);
+}
+
+void wisdom_seeker::est_pref_gender(string gen){
+    set_pref_gender(gen);
+}
+void wisdom_seeker::est_sign(string zod){
+    set_sign(zod);
+}
+
+void wisdom_seeker::est_seeker_name(string name){
+     set_seeker_name(name);
+}
+
+
 
 
 //calculate the user zodiac sign based off of their birthday entered
@@ -125,74 +176,3 @@ string wisdom_seeker::calc_zodiac_sign(){
     }
 }
 
-
-
-//setters
-void wisdom_seeker::set_seeker_name(string name){
-    this -> seeker_name = name;
-}
-
-void wisdom_seeker::set_birth_month(int month){
-    this -> birth_month = month;
-}
-
-void wisdom_seeker::set_birth_day(int day){
-    this -> birth_day = day;
-}
-
-void wisdom_seeker::set_age(int age){
-    this -> seeker_age = age;
-}
-
-void wisdom_seeker::set_pref_gender(string gen){
-    this -> pref_gender = gen;
-}
-
-void wisdom_seeker::set_sign(string zod){
-    this -> sign = zod;
-}
-
-
-int wisdom_seeker::get_birth_month(){
-    return birth_month;
-}
-int wisdom_seeker::get_birth_day(){
-    return birth_day;
-}
-int wisdom_seeker::get_age(){
-    return seeker_age;
-}
-string wisdom_seeker::get_pref_gender(){
-    return pref_gender;
-}
-string wisdom_seeker::get_sign(){
-    return sign;
-}
-string wisdom_seeker::get_seeker_name(){
-    return seeker_name;
-}
-string wisdom_seeker::get_zodiac_sign(){
-    return zodiac_sign;
-}
-
-
-//establish functions
-void wisdom_seeker::est_birth_day(int month, int day){
-    set_birth_month(month);
-    set_birth_day(day);
-}
-
-void wisdom_seeker::est_age(int age){
-    set_age(age);
-}
-
-void wisdom_seeker::est_pref_gender(string gen){
-    set_pref_gender(gen);
-}
-void wisdom_seeker::est_sign(string zod){
-    set_sign(zod);
-}
-
-void wisdom_seeker::est_seeker_name(string name){
-     est_seeker_name(name);
-}

@@ -15,6 +15,7 @@
 using namespace std;
 
 class wisdom_seeker {
+    friend class tarot_deck;
 public:
     //constructor
     //will call the establish functions
@@ -24,10 +25,6 @@ public:
     //functions to figure out the users base card
     string calc_zodiac_sign();
     string suit_base_card();
-    string get_base_card();
-    string get_charcter();
-
-
 
 
     //setters

@@ -39,6 +39,12 @@ public:
 
    tarot_card select_random_card();
 
+   //functions to determine the users base card based off data entered
+    string suit_base_card(string);
+    string get_character(string, int);
+    string calculate_base_card(string, string, int);
+
+
    //setter
    void set_card(tarot_card);
 

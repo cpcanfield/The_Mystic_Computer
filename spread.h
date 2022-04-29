@@ -26,8 +26,6 @@ public:
     spread();
 
 
-    string calculate_base_card();
-
     //setters
     void set_past(tarot_card);
 

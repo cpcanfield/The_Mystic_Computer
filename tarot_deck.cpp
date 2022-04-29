@@ -16,6 +16,7 @@
 using namespace std;
 #include "tarot_card.h"
 #include "tarot_deck.h"
+#include "wisdom_seeker.h"
 
 //constructor
 //constructor, reads file, and stores into an array (i.e the tarot deck)
@@ -85,4 +86,47 @@ bool tarot_deck::check_same_card(tarot_card current_card, tarot_card find_card){
     if(current_card.get_card_name() == find_card.get_card_name() && current_card.get_card_meaning() == find_card.get_card_meaning()){
         return true;
     }return false;
+}
+
+//returns the name of the users base card for reading
+string tarot_deck::suit_base_card(string sign){
+
+    if(sign == "Cancer" || "Scorpio" || "Pisces"){
+        return "Cups";
+    }
+    if (sign == "Aries" || "Leo" || "Sagittarius") {
+        return "Wands";
+    }
+    if (sign == "Gemini" || "Libra" || "Aquarius") {
+        return "Swords";
+    }
+    if (sign == "Taurus" || "Virgo" || "Capricorn") {
+        return "Pentacles";
+    }
+}
+
+
+string tarot_deck::get_character(string gen, int age ){
+    if(gen == "Female"){
+        if(age <= 15){
+            return "Princess";
+        }else{
+            return "Queen";
+        }
+    }if(gen == "Male"){
+        if(age <= 15){
+            return "Prince";
+        }else{
+            return "King";
+        }
+    }else{
+        return "Ace";
+    }
+}
+
+string tarot_deck::calculate_base_card(string sign, string gen, int age){
+    string suit = suit_base_card(sign);
+    string character = get_character(gen, age);
+    string base_card = character + " of " + suit;
+    return base_card;
 }
