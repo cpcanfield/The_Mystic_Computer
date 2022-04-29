@@ -47,7 +47,7 @@ public:
     //functions to determine the users base card based off data entered
     string suit_base_card(string);
     string get_character(string, int);
-    string calculate_base_card(string, string, int);
+    tarot_card calc_base_card(string, string, int);
 
     //vector<tarot_card> tarot_card_deck;
     vector<tarot_card> tarot_card_deck;

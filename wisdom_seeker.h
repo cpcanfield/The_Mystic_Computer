@@ -13,6 +13,7 @@
 #include <iostream>
 #include<string>
 using namespace std;
+#include "tarot_deck.h"
 
 class wisdom_seeker {
     friend class tarot_deck;

@@ -34,7 +34,7 @@ int main() {
         spread mythical_spread = spread();
 
         //create the deck for this reading
-        tarot_deck mythical_deck = tarot_deck("card_definitions.txt");
+        tarot_deck mythical_deck = tarot_deck("/Users/carolinecanfield/Desktop/card_definitions.txt");
 
         //input variables
         string name;
@@ -42,6 +42,7 @@ int main() {
         int day;
         int age;
         string gender;
+        string shuffle_deck;
 
         //prompt for users name
         cout << "\n\nWonderful! let's see what the cards have to say for you... " << endl;
@@ -75,15 +76,44 @@ int main() {
         //create an object of the wisdom seeker class out of this information
         wisdom_seeker seeking_wisdom = wisdom_seeker(name, month, day, age, gender);
 
+        //establish their sign
+        string seeking_sign = seeking_wisdom.get_zodiac_sign();
 
-        cout << "\n\nWonderful! " << seeking_wisdom.get_seeker_name() << ", a " << seeking_wisdom.get_zodiac_sign() << "!";
+        //remove the base card from the deck
+        tarot_card base_card = calc_base_card(seeking_sign, gender, age);
+        mythical_deck.del(base_card);
 
 
 
+        cout << "\n\nWonderful! " << seeking_wisdom.get_seeker_name() << ", a " << seeking_sign << "!" << endl;
 
 
+        cout << "We may commence the reading! " << endl;
+        cout << "You may shuffle the deck as many times as you wish! " << endl;
+        cout << "While you do so, don't forget to set your intentions and put your energy into the deck!" << endl;
+        cout << "Type shuffle to shuffle the deck once: " << endl;
+        cin >> shuffle_deck;
+        while(shuffle_deck == "shuffle"){
+            mythical_deck.shuffle_deck();
+            cout << " ^*((&&%&$%^*(&*()*&^" << endl;
+            cout << "%&*(__(*&*^%$^ " << endl;
+            cout << ")**(&^^%(%$###%*&^**^@#!#" << endl;
+            cout << ")*)(*&^%^^%*&**^&*( " << endl;
+            cout << "\n\nAs you can see, I just shuffled the deck!" << endl;
+            cout << "Do you feel like you put enough of your energy into it?" << endl;
+            cout << "\nI can shuffle it again. Would you like me to shuffle it again?" << endl;
+            cout << "Please enter 'shuffle' for me to shuffle again, and anything else to contiue: " endl;
+            cin >> shuffle_deck;
+        }
 
+        //variable to input
+        string input;
 
+        cout << "\n\nHazzuh! you are ready to pull cards!!" << endl;
+        cout << "All cards you will be pulling are from the top of the deck." << endl;
+        cout << "To pull the first card you must enter the number 1: " << endl;
+        cin >> input;
+        //pull
 
     }
 

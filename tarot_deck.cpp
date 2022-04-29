@@ -137,9 +137,11 @@ string tarot_deck::get_character(string gen, int age ){
     }
 }
 
-string tarot_deck::calculate_base_card(string sign, string gen, int age){
+tarot_card tarot_deck::calc_base_card(string sign, string gen, int age){
     string suit = suit_base_card(sign);
     string character = get_character(gen, age);
-    string base_card = character + " of " + suit;
+    string base_card_name = character + " of " + suit;
+    //create a card node from this
+    tarot_card base_card = tarot_card(base_card_name);
     return base_card;
 }

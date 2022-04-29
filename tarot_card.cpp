@@ -19,6 +19,9 @@ tarot_card::tarot_card()
 : card_name(""), card_meaning("")
 {}
 
+tarot_card::tarot_card(string name)
+: card_name(name), card_meaning("")
+{}
 
 
 void print_card_data(tarot_card card){
