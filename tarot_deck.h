@@ -50,8 +50,8 @@ public:
     //functions to determine the users base card based off data entered
      string suit_base_card(string);
      string get_character(string, int);
-     tarot_card calc_base_card(string, string, int);
-     void delete_base_card(string, string, int);
+     static tarot_card calc_base_card(string, string, int);
+
 
 
 

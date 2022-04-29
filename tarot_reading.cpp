@@ -79,9 +79,10 @@ int main() {
         //establish their sign
         string seeking_sign = seeking_wisdom.get_zodiac_sign();
 
-        //based off information entered, delete the base card
-        tarot_deck::delete_base_card(seeking_sign, seeking_wisdom.get_pref_gender(), seeking_wisdom.get_age());
-
+        //based off information entered, calculate the user's base card
+        tarot_card base_card =  tarot_deck::calc_base_card(seeking_sign, seeking_wisdom.get_pref_gender(), seeking_wisdom.get_age());
+        //now, delete that card from the deck
+        mythical_deck.del(base_card);
 
 
         cout << "\n\nWonderful! " << seeking_wisdom.get_seeker_name() << ", a " << seeking_sign << "!" << endl;
