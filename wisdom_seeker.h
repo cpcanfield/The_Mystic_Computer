@@ -47,6 +47,12 @@ public:
     string get_seeker_name();
     string get_zodiac_sign();
 
+//functions to help calculate the users base card
+
+     string suit_base_card();
+     string get_character();
+     string get_base_card();
+
 
 private:
     //variables for the user information
@@ -57,6 +63,7 @@ private:
     string sign;
     string seeker_name;
     string zodiac_sign;
+    string seeker_base_card;
 
 
 

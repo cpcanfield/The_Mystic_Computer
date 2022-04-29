@@ -175,3 +175,48 @@ string wisdom_seeker::calc_zodiac_sign(){
     }return "None!";
 }
 
+
+//returns the name of the users base card for reading
+string wisdom_seeker::suit_base_card(){
+
+    if(zodiac_sign == "Cancer" || "Scorpio" || "Pisces"){
+        return "Cups";
+    }
+    if (zodiac_sign == "Aries" || "Leo" || "Sagittarius") {
+        return "Wands";
+    }
+    if (zodiac_sign == "Gemini" || "Libra" || "Aquarius") {
+        return "Swords";
+    }
+    if (zodiac_sign == "Taurus" || "Virgo" || "Capricorn") {
+        return "Pentacles";
+    }
+}
+
+
+string wisdom_seeker::get_character(){
+    if(pref_gender == "Female"){
+        if(seeker_age <= 15){
+            return "Princess";
+        }else{
+            return "Queen";
+        }
+    }if(pref_gender == "Male"){
+        if(seeker_age <= 15){
+            return "Prince";
+        }else{
+            return "King";
+        }
+    }else{
+        return "Ace";
+    }
+}
+
+//returns the name of the string of the users base card
+string wisdom_seeker::get_base_card(){
+    string suit = suit_base_card();
+    string character = get_character();
+    seeker_base_card = character + " of " + suit + " (upright)";
+    return seeker_base_card;
+}
+

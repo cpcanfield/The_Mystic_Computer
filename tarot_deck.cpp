@@ -101,48 +101,10 @@ tarot_card tarot_deck::select_top_card(){
 }
 
 
-//returns the name of the users base card for reading
-string tarot_deck::suit_base_card(string sign){
-
-    if(sign == "Cancer" || "Scorpio" || "Pisces"){
-        return "Cups";
-    }
-    if (sign == "Aries" || "Leo" || "Sagittarius") {
-        return "Wands";
-    }
-    if (sign == "Gemini" || "Libra" || "Aquarius") {
-        return "Swords";
-    }
-    if (sign == "Taurus" || "Virgo" || "Capricorn") {
-        return "Pentacles";
-    }
+//creates base card and deletes it from the current deck
+void tarot_deck::delete_base_card(string card_name) {
+    //create object of a card from the name
+    tarot_card base_card = tarot_card(base_card);
+    //delete this card from the current deck
+    del(base_card);
 }
-
-
-string tarot_deck::get_character(string gen, int age ){
-    if(gen == "Female"){
-        if(age <= 15){
-            return "Princess";
-        }else{
-            return "Queen";
-        }
-    }if(gen == "Male"){
-        if(age <= 15){
-            return "Prince";
-        }else{
-            return "King";
-        }
-    }else{
-        return "Ace";
-    }
-}
-
-tarot_card tarot_deck::calc_base_card(string sign, string gen, int age){
-    string suit = suit_base_card(sign);
-    string character = get_character(gen, age);
-    string base_card_name = character + " of " + suit;
-    //create tarot card object out of information
-    tarot_card base_card = tarot_card(base_card_name);
-    return base_card;
-}
-

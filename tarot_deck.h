@@ -41,6 +41,8 @@ public:
     //deletes and removes card from the deck
     void del(tarot_card);
 
+    void delete_base_card(string);
+
     //checks to see if cards are the same when searching for a specified card
     bool check_same_card(tarot_card , tarot_card);
 
@@ -48,9 +50,9 @@ public:
     tarot_card select_top_card();
 
     //functions to determine the users base card based off data entered
-     static string suit_base_card(string);
+/*     static string suit_base_card();
      static string get_character(string, int);
-     static tarot_card calc_base_card(string, string, int);
+     static tarot_card calc_base_card(string, string, int);*/
 
 
 
