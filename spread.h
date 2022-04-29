@@ -35,8 +35,6 @@ public:
     void set_base_card(tarot_card);
 
 
-
-
     //getters
     tarot_card get_past();
     tarot_card get_present();
@@ -45,6 +43,12 @@ public:
     tarot_card get_pot_solu();
     tarot_card get_base_card();
 
+    //print functions
+    void print_past();
+    void print_present();
+    void print_future();
+    void print_circum();
+    void print_pot_solu();
 
 private:
     tarot_card past_card;

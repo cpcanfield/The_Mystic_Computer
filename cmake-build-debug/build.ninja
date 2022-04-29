@@ -72,12 +72,6 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 
 build cmake_object_order_depends_target_The_Mystic_Computer: phony || CMakeFiles/The_Mystic_Computer.dir
 
-build CMakeFiles/The_Mystic_Computer.dir/main.cpp.o: CXX_COMPILER__The_Mystic_Computer_Debug /Users/carolinecanfield/CLionProjects/The_Mystic_Computer/main.cpp || cmake_object_order_depends_target_The_Mystic_Computer
-  DEP_FILE = CMakeFiles/The_Mystic_Computer.dir/main.cpp.o.d
-  FLAGS = -g -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -mmacosx-version-min=11.2 -std=gnu++14
-  OBJECT_DIR = CMakeFiles/The_Mystic_Computer.dir
-  OBJECT_FILE_DIR = CMakeFiles/The_Mystic_Computer.dir
-
 build CMakeFiles/The_Mystic_Computer.dir/wisdom_seeker.cpp.o: CXX_COMPILER__The_Mystic_Computer_Debug /Users/carolinecanfield/CLionProjects/The_Mystic_Computer/wisdom_seeker.cpp || cmake_object_order_depends_target_The_Mystic_Computer
   DEP_FILE = CMakeFiles/The_Mystic_Computer.dir/wisdom_seeker.cpp.o.d
   FLAGS = -g -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -mmacosx-version-min=11.2 -std=gnu++14
@@ -116,7 +110,7 @@ build CMakeFiles/The_Mystic_Computer.dir/spread.cpp.o: CXX_COMPILER__The_Mystic_
 #############################################
 # Link the executable The_Mystic_Computer
 
-build The_Mystic_Computer: CXX_EXECUTABLE_LINKER__The_Mystic_Computer_Debug CMakeFiles/The_Mystic_Computer.dir/main.cpp.o CMakeFiles/The_Mystic_Computer.dir/wisdom_seeker.cpp.o CMakeFiles/The_Mystic_Computer.dir/tarot_card.cpp.o CMakeFiles/The_Mystic_Computer.dir/tarot_deck.cpp.o CMakeFiles/The_Mystic_Computer.dir/tarot_reading.cpp.o CMakeFiles/The_Mystic_Computer.dir/spread.cpp.o
+build The_Mystic_Computer: CXX_EXECUTABLE_LINKER__The_Mystic_Computer_Debug CMakeFiles/The_Mystic_Computer.dir/wisdom_seeker.cpp.o CMakeFiles/The_Mystic_Computer.dir/tarot_card.cpp.o CMakeFiles/The_Mystic_Computer.dir/tarot_deck.cpp.o CMakeFiles/The_Mystic_Computer.dir/tarot_reading.cpp.o CMakeFiles/The_Mystic_Computer.dir/spread.cpp.o
   FLAGS = -g -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -mmacosx-version-min=11.2
   OBJECT_DIR = CMakeFiles/The_Mystic_Computer.dir
   POST_BUILD = :

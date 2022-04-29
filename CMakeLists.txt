@@ -3,7 +3,7 @@ project(The_Mystic_Computer)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(The_Mystic_Computer main.cpp
+add_executable(The_Mystic_Computer 
         wisdom_seeker.cpp
         wisdom_seeker.h
         tarot_card.cpp
