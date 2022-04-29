@@ -195,13 +195,13 @@ string wisdom_seeker::suit_base_card(){
 
 
 string wisdom_seeker::get_character(){
-    if(pref_gender == "Female"){
+    if(pref_gender == "female"){
         if(seeker_age <= 15){
             return "Princess";
         }else{
             return "Queen";
         }
-    }if(pref_gender == "Male"){
+    }if(pref_gender == "male"){
         if(seeker_age <= 15){
             return "Prince";
         }else{

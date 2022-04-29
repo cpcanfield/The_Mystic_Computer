@@ -28,7 +28,7 @@ int main() {
     string read_cards;
     cin >> read_cards;
     //start loop to read the users card
-    while(read_cards == "yes"){
+    while(read_cards == "yes") {
 
         //create the spread for this reading
         spread mythical_spread = spread();
@@ -56,11 +56,11 @@ int main() {
         cout << "What is your birthday? " << endl;
         cout << "Enter the number of the month here: ";
         cin >> month;
-        cout << "\n\nNow, enter the day: " ;
+        cout << "\n\nNow, enter the day: ";
         cin >> day;
 
         //prompt for age
-        cout<< "I am almost done asking questions... don't worry " << endl;
+        cout << "I am almost done asking questions... don't worry " << endl;
         cout << "But, I must ask... How old are you? " << endl;
         cout << "Please type here: ";
         cin >> age;
@@ -93,7 +93,7 @@ int main() {
         cout << "While you do so, don't forget to set your intentions and put your energy into the deck!" << endl;
         cout << "Type shuffle to shuffle the deck once: " << endl;
         cin >> shuffle_deck;
-        while(shuffle_deck == "shuffle"){
+        while (shuffle_deck == "shuffle") {
             mythical_deck.shuffle_deck();
             cout << " ^*((&&%&$%^*(&*()*&^" << endl;
             cout << "%&*(__(*&*^%$^ " << endl;
@@ -114,7 +114,6 @@ int main() {
         cout << "To pull the first card you must enter the number 1: " << endl;
         cin >> input;
         //pull
-
     }
 
 
