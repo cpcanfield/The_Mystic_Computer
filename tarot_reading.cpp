@@ -102,7 +102,7 @@ int main() {
             cout << "\n\nAs you can see, I just shuffled the deck!" << endl;
             cout << "Do you feel like you put enough of your energy into it?" << endl;
             cout << "\nI can shuffle it again. Would you like me to shuffle it again?" << endl;
-            cout << "Please enter 'shuffle' for me to shuffle again, and anything else to contiue: " endl;
+            cout << "Please enter 'shuffle' for me to shuffle again, and anything else to contiue: " << endl;
             cin >> shuffle_deck;
         }
 

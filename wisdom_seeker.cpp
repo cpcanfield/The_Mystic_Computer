@@ -172,6 +172,6 @@ string wisdom_seeker::calc_zodiac_sign(){
         }else{
             return zodiac_sign = "Capricorn";
         }
-    }
+    }return "None!";
 }
 
