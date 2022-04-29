@@ -137,14 +137,19 @@ string tarot_deck::get_character(string gen, int age ){
     }
 }
 
-string tarot_deck::calc_base_card(string sign, string gen, int age){
+tarot_card tarot_deck::calc_base_card(string sign, string gen, int age){
     string suit = suit_base_card(sign);
     string character = get_character(gen, age);
     string base_card_name = character + " of " + suit;
-    return base_card_name;
+    //create tarot card object out of information
+    tarot_card base_card = tarot_card(base_card_name);
+    return base_card;
 }
 
-//this function deletes the base card from the deck
-void tarot_deck::delete_base_card(){
-    string sign =
+
+static void tarot_deck:: delete_base_card(string sign, string gen, int age) {
+    //calculate the base card
+    tarot_card this_base_card = calc_base_card(sign, gen, age);
+    //remove the card from the deck
+    del(this_base_card);
 }

@@ -15,6 +15,8 @@
 #include<array>
 using namespace std;
 #include "tarot_card.h"
+
+
 #ifndef THE_MYSTIC_COMPUTER_TAROT_DECK_H
 #define THE_MYSTIC_COMPUTER_TAROT_DECK_H
 
@@ -48,14 +50,16 @@ public:
     //functions to determine the users base card based off data entered
     string suit_base_card(string);
     string get_character(string, int);
-    string calc_base_card(string, string, int);
-    void delete_base_card();
+    tarot_card calc_base_card(string, string, int);
+    static void delete_base_card(string, string, int);
+
 
 
     //vector<tarot_card> tarot_card_deck;
     vector<tarot_card> tarot_card_deck;
 
 private:
+    tarot_card base_card;
 
 };
 

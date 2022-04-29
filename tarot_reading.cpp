@@ -79,9 +79,8 @@ int main() {
         //establish their sign
         string seeking_sign = seeking_wisdom.get_zodiac_sign();
 
-        //establish their base card
-
-
+        //based off information entered, delete the base card
+        tarot_deck::delete_base_card(seeking_sign, seeking_wisdom.get_pref_gender(), seeking_wisdom.get_age());
 
 
 

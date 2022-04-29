@@ -17,7 +17,7 @@ using namespace std;
 
 
 class wisdom_seeker {
-    friend class tarot_deck;
+
 
 public:
     //constructor
