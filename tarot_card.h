@@ -13,8 +13,12 @@ using namespace std;
 class tarot_card {
 public:
     //tarot_card constructors
-    //will always have a name and definition
+    //name and definition
     tarot_card(string, string);
+    //null constructor
+    tarot_card();
+
+
 
 
     //getters

@@ -57,17 +57,21 @@ vector<tarot_card> tarot_deck::scan_file(string file_name){
 return card_deck;
 }
 
+
+//prints the current deck when called
 void tarot_deck::print_deck() {
     for(int i = 0; i<tarot_card_deck.size(); i++){
         cout<< tarot_card_deck[i].get_card_name() << ":" <<
         tarot_card_deck[i].get_card_meaning() << endl;
     }
 }
-//function to shuffle deck
+
+
+//function to shuffle deck the current deck
 void tarot_deck:: shuffle_deck(){
-random_device rd;
-mt19937 g(rd());
-shuffle(tarot_card_deck.begin(), tarot_card_deck.end(), g);
+    random_device rd;
+    mt19937 g(rd());
+    shuffle(tarot_card_deck.begin(), tarot_card_deck.end(), g);
 }
 
 
@@ -87,6 +91,15 @@ bool tarot_deck::check_same_card(tarot_card current_card, tarot_card find_card){
         return true;
     }return false;
 }
+
+
+//deletes and returns the card that is at the top of the deck
+tarot_card tarot_deck::select_top_card(){
+    tarot_card top_card = tarot_card_deck.front();
+    del(top_card);
+    return top_card;
+}
+
 
 //returns the name of the users base card for reading
 string tarot_deck::suit_base_card(string sign){

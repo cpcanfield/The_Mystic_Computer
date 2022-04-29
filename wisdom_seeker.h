@@ -24,7 +24,7 @@ public:
 
     //functions to figure out the users base card
     string calc_zodiac_sign();
-    string suit_base_card();
+
 
 
     //setters

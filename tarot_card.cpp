@@ -15,6 +15,11 @@ tarot_card::tarot_card(string name, string def)
     : card_name(name), card_meaning(def)
 {}
 
+tarot_card::tarot_card()
+: card_name(""), card_meaning("")
+{}
+
+
 
 void print_card_data(tarot_card card){
     cout << card.get_card_name() << ": " << card.get_card_meaning()<< endl;

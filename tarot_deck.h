@@ -21,42 +21,33 @@ using namespace std;
 
 class  tarot_deck {
 public:
+
    //constructor, reads file, and stores into a vector (i.e the tarot deck)
    tarot_deck(string);
 
-   //function that reads the file with all the tarot card data
-   //and puts data into vector
-   vector<tarot_card>  scan_file(string);
+    //function that reads the file with all the tarot card data
+    //and puts data into vector
+    vector<tarot_card>  scan_file(string);
 
-   //function to shuffle deck
-   void shuffle_deck();
+    //function to print the current deck
+    void print_deck();
 
-   //function to print the current deck
-   void print_deck();
-
-   //checks to see if cards are the same when searching for a specified card
-   bool check_same_card(tarot_card , tarot_card);
-
-   tarot_card select_random_card();
-
-   //functions to determine the users base card based off data entered
-    string suit_base_card(string);
-    string get_character(string, int);
-    string calculate_base_card(string, string, int);
-
-
-   //setter
-   void set_card(tarot_card);
-
-   //getter
-   tarot_card get_card();
+    //function to shuffle deck
+    void shuffle_deck();
 
     //deletes and removes card from the deck
     void del(tarot_card);
 
-   //deletes and removes card from the deck
-   tarot_card remove(tarot_card);
+    //checks to see if cards are the same when searching for a specified card
+    bool check_same_card(tarot_card , tarot_card);
 
+    //selects top card from the deck, deletes it, and returns it
+    tarot_card select_top_card();
+
+    //functions to determine the users base card based off data entered
+    string suit_base_card(string);
+    string get_character(string, int);
+    string calculate_base_card(string, string, int);
 
     //vector<tarot_card> tarot_card_deck;
     vector<tarot_card> tarot_card_deck;

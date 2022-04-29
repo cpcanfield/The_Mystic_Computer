@@ -14,22 +14,51 @@
 using namespace std;
 #include "spread.h"
 
+//constructs a tarot spread where all positions are null
+spread::spread()
+    : past_card(tarot_card()), present_card(tarot_card()), future_card(tarot_card()),
+    circum_card(tarot_card()), pot_solu_card(tarot_card()), base_card(tarot_card())
+{}
 
 
-//returns the name of the users base card for reading
-string spread::suit_base_card(string sign){
+//setters
+void spread::set_past(tarot_card card){
+    this -> past_card = card;
+}
+void spread::set_present(tarot_card card){
+    this -> present_card = card;
+}
 
-    if(sign == "Cancer" || "Scorpio" || "Pisces"){
-        return "Cups";
-    }
-    if (sign == "Aries" || "Leo" || "Sagittarius") {
-        return "Wands";
-    }
-    if (sign == "Gemini" || "Libra" || "Aquarius") {
-        return "Swords";
-    }
-    if (sign == "Taurus" || "Virgo" || "Capricorn") {
-        return "Pentacles";
+void spread::set_future(tarot_card card){
+    this -> future_card = card;
+}
+void spread::set_circum(tarot_card card){
+    this -> circum_card = card;
+}
+void spread::set_pot_solu(tarot_card card){
+    this -> pot_solu_card = card;
+}
+void spread::set_base_card(tarot_card card){
+    this -> base_card = card;
+}
 
-    }
+
+//getters
+tarot_card spread::get_past(){
+    return past_card;
+}
+tarot_card spread::get_present(){
+    return present_card;
+}
+tarot_card spread::get_future(){
+    return future_card;
+}
+tarot_card spread::get_circum(){
+    return circum_card;
+}
+tarot_card spread::get_pot_solu(){
+    return pot_solu_card;
+}
+tarot_card spread::get_base_card(){
+    return base_card;
 }

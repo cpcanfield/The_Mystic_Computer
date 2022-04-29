@@ -26,7 +26,6 @@ wisdom_seeker::wisdom_seeker(string name, int month, int day, int age, string ge
 {}
 
 
-
 //setters
 void wisdom_seeker::set_seeker_name(string name){
     this -> seeker_name = name;
