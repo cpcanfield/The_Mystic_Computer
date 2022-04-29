@@ -30,6 +30,12 @@ int main() {
     //start loop to read the users card
     while(read_cards == "yes"){
 
+        //create the spread for this reading
+        spread mythical_spread = spread();
+
+        //create the deck for this reading
+        tarot_deck mythical_deck = tarot_deck("card_definitions.txt");
+
         //input variables
         string name;
         int month;
@@ -69,7 +75,10 @@ int main() {
         //create an object of the wisdom seeker class out of this information
         wisdom_seeker seeking_wisdom = wisdom_seeker(name, month, day, age, gender);
 
-        cout << "Wonderful! " << seeking_wisdom.get_seeker_name() << ", a " << seeking_wisdom.get_zodiac_sign() << "!";
+
+        cout << "\n\nWonderful! " << seeking_wisdom.get_seeker_name() << ", a " << seeking_wisdom.get_zodiac_sign() << "!";
+
+
 
 
 
