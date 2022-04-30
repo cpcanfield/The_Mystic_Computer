@@ -22,7 +22,7 @@ wisdom_seeker::wisdom_seeker(){}
 
 //constructor
 wisdom_seeker::wisdom_seeker(string name, int month, int day, int age, string gender)
-    : seeker_name(name), birth_month(month), birth_day(day), seeker_age(age), pref_gender(gender), zodiac_sign(calc_zodiac_sign())
+    : seeker_name(name), birth_month(month), birth_day(day), seeker_age(age), pref_gender(gender), zodiac_sign(calc_zodiac_sign(), seeker_base_card)
 {}
 
 
