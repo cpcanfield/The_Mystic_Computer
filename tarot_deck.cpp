@@ -104,7 +104,7 @@ tarot_card tarot_deck::select_top_card(){
 //creates base card and deletes it from the current deck
 void tarot_deck::delete_base_card(string card_name) {
     //create object of a card from the name
-    tarot_card base_card = tarot_card(base_card);
+    tarot_card base_card = tarot_card(card_name);
     //delete this card from the current deck
     del(base_card);
 }
