@@ -50,6 +50,8 @@ public:
     void print_circum();
     void print_pot_solu();
 
+
+
 private:
     tarot_card past_card;
     tarot_card present_card;

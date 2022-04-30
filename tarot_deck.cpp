@@ -34,7 +34,7 @@ vector<tarot_card> tarot_deck::scan_file(string file_name){
         std::cerr<<"Could not open the file!"<< std::endl;
     }//else:
     //create temporary variables
-    string name, def;
+    string name, def, orientation, colon;
     string myString;
     string line;
     //create a vector to hold the future data
@@ -45,12 +45,14 @@ vector<tarot_card> tarot_deck::scan_file(string file_name){
         //using the delimiter
         stringstream ss(line);
         //read until ":" for the name of the card
-        getline(ss, name, ':');
+        getline(ss, name, '(');
+        getline(ss, orientation, ')');
+        getline(ss, colon, ':');
         //read until ";" for the definition of the card
         getline(ss, def, ';');
         //create a tarot card object by calling that constructor
         //with the newly created strings
-        tarot_card temp_card = tarot_card(name, def);
+        tarot_card temp_card = tarot_card(name, def, orientation);
         //add this to the card_deck vector
         card_deck.push_back(temp_card);
     }
@@ -76,18 +78,16 @@ void tarot_deck:: shuffle_deck(){
 
 
 //deletes card from the deck
-void tarot_deck::del(tarot_card card){
-    //card that will be deleted
-    tarot_card find_card = card;
+void tarot_deck::del(string card){
     for(int i = 0; i<tarot_card_deck.size(); i++){
-        if(check_same_card(find_card, tarot_card_deck[i]) == true)
+        if(check_same_card(card, tarot_card_deck[i].get_card_name()) == true)
             tarot_card_deck.erase(tarot_card_deck.begin() +i);
     }
 }
 
 //checks to see if cards are the same when searching for a specified card
-bool tarot_deck::check_same_card(tarot_card current_card, tarot_card find_card){
-    if(current_card.get_card_name() == find_card.get_card_name() && current_card.get_card_meaning() == find_card.get_card_meaning()){
+bool tarot_deck::check_same_card(string current_card_name, string find_card_name){
+    if(current_card_name  == find_card_name){
         return true;
     }return false;
 }
@@ -96,7 +96,7 @@ bool tarot_deck::check_same_card(tarot_card current_card, tarot_card find_card){
 //deletes and returns the card that is at the top of the deck
 tarot_card tarot_deck::select_top_card(){
     tarot_card top_card = tarot_card_deck.front();
-    del(top_card);
+    del(top_card.get_card_name());
     return top_card;
 }
 
@@ -106,5 +106,5 @@ void tarot_deck::delete_base_card(string card_name) {
     //create object of a card from the name
     tarot_card base_card = tarot_card(card_name);
     //delete this card from the current deck
-    del(base_card);
+    del(base_card.get_card_name());
 }

@@ -39,12 +39,12 @@ public:
     void shuffle_deck();
 
     //deletes and removes card from the deck
-    void del(tarot_card);
+    void del(string);
 
     void delete_base_card(string);
 
     //checks to see if cards are the same when searching for a specified card
-    bool check_same_card(tarot_card , tarot_card);
+    bool check_same_card(string , string);
 
     //selects top card from the deck, deletes it, and returns it
     tarot_card select_top_card();

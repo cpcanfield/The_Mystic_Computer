@@ -14,34 +14,41 @@ class tarot_card {
 public:
     //tarot_card constructors
     //name and definition
-    tarot_card(string, string);
+    tarot_card(string, string, string);
 
     //just with a name constructor
     tarot_card(string);
+
+    //name and meaning
+    tarot_card(string, string);
 
     //null constructor
     tarot_card();
 
 
-    tarot_card calc_base_card(string, string, int);
-
-
     //getters
     string get_card_meaning();
     string get_card_name();
+    string get_orientation();
 
-
-protected:
     //setters
     void set_card_meaning(string);
     void set_card_name(string);
+    void set_orientation(string);
+
     void print_card_data(tarot_card);
+
+
+
+protected:
+
 
 private:
 
     //private variables
     string card_name;
     string card_meaning;
+    string orientation;
 
 };
 

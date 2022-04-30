@@ -22,7 +22,7 @@ wisdom_seeker::wisdom_seeker(){}
 
 //constructor
 wisdom_seeker::wisdom_seeker(string name, int month, int day, int age, string gender)
-    : seeker_name(name), birth_month(month), birth_day(day), seeker_age(age), pref_gender(gender), zodiac_sign(calc_zodiac_sign()), seeker_base_card(get_base_card())
+    : seeker_name(name), birth_month(month), birth_day(day), seeker_age(age), pref_gender(gender), zodiac_sign(calc_zodiac_sign())
 {}
 
 
@@ -70,31 +70,6 @@ string wisdom_seeker::get_seeker_name(){
 string wisdom_seeker::get_zodiac_sign(){
     return zodiac_sign;
 }
-
-
-//establish functions
-void wisdom_seeker::est_birth_day(int month, int day){
-    set_birth_month(month);
-    set_birth_day(day);
-}
-
-void wisdom_seeker::est_age(int age){
-    set_age(age);
-}
-
-void wisdom_seeker::est_pref_gender(string gen){
-    set_pref_gender(gen);
-}
-void wisdom_seeker::est_sign(string zod){
-    set_sign(zod);
-}
-
-void wisdom_seeker::est_seeker_name(string name){
-     set_seeker_name(name);
-}
-
-
-
 
 //calculate the user zodiac sign based off of their birthday entered
 string wisdom_seeker::calc_zodiac_sign(){
@@ -179,16 +154,16 @@ string wisdom_seeker::calc_zodiac_sign(){
 //returns the name of the users base card for reading
 string wisdom_seeker::suit_base_card(){
 
-    if(zodiac_sign == "Cancer" || "Scorpio" || "Pisces"){
+    if(zodiac_sign == "Cancer" || zodiac_sign =="Scorpio" || zodiac_sign =="Pisces"){
         return "Cups";
     }
-    if (zodiac_sign == "Aries" || "Leo" || "Sagittarius") {
+    if (zodiac_sign == "Aries" ||zodiac_sign == "Leo" || zodiac_sign =="Sagittarius") {
         return "Wands";
     }
-    if (zodiac_sign == "Gemini" || "Libra" || "Aquarius") {
+    if (zodiac_sign == "Gemini" || zodiac_sign =="Libra" || zodiac_sign =="Aquarius") {
         return "Swords";
     }
-    if (zodiac_sign == "Taurus" || "Virgo" || "Capricorn") {
+    if (zodiac_sign == "Taurus" ||zodiac_sign == "Virgo" || zodiac_sign == "Capricorn") {
         return "Pentacles";
     }
 }
@@ -216,7 +191,7 @@ string wisdom_seeker::get_character(){
 string wisdom_seeker::get_base_card(){
     string suit = suit_base_card();
     string character = get_character();
-    seeker_base_card = character + " of " + suit + " (upright)";
+    seeker_base_card = character + " of " + suit;
     return seeker_base_card;
 }
 
