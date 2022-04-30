@@ -18,7 +18,6 @@ using namespace std;
 
 class wisdom_seeker {
 
-
 public:
     //constructor
     //will call the establish functions
