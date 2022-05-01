@@ -22,10 +22,10 @@ public:
     //constructor
     //will call the establish functions
     wisdom_seeker(string, int, int, int, string);
-    wisdom_seeker();
+
 
     //functions to figure out the users base card
-    string calc_zodiac_sign();
+    string calc_zodiac_sign(string);
 
 
 
@@ -35,7 +35,7 @@ public:
     void set_birth_day(int);
     void set_age(int);
     void set_pref_gender(string);
-    void set_sign(string );
+    void set_sign(string);
 
     //getters
     int get_birth_month();
@@ -48,7 +48,7 @@ public:
 
 //functions to help calculate the users base card
 
-     string suit_base_card();
+     string suit_base_card(string);
      string get_character();
      string get_base_card();
 
@@ -59,9 +59,8 @@ private:
     int birth_day;
     int seeker_age;
     string pref_gender;
-    string sign;
+    string seeker_sign;
     string seeker_name;
-    string zodiac_sign;
     string seeker_base_card;
 
 
