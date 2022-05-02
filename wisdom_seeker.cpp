@@ -64,10 +64,13 @@ string wisdom_seeker::get_seeker_name(){
     return seeker_name;
 }
 
+string wisdom_seeker::get_zodiac_sign(){
+    return seeker_sign;
+}
 
 
 //calculate the user zodiac sign based off of their birthday entered
-string wisdom_seeker::calc_zodiac_sign(string zodiac_sign) {
+string wisdom_seeker::calc_zodiac_sign() {
     int month = birth_month;
     int day = birth_day;
     if (month == 1) {
@@ -182,8 +185,8 @@ string wisdom_seeker::calc_zodiac_sign(string zodiac_sign) {
 }
 
 //returns the name of the users base card for reading
-string wisdom_seeker::suit_base_card(string zodiac_sign) {
-
+string wisdom_seeker::suit_base_card() {
+    string zodiac_sign = calc_zodiac_sign();
     if (zodiac_sign == "Cancer" || zodiac_sign == "Scorpio" || zodiac_sign == "Pisces") {
         return "Cups";
     }
@@ -220,9 +223,10 @@ string wisdom_seeker::get_character(){
 
 //returns the name of the string of the users base card
 string wisdom_seeker::get_base_card(){
-    string suit = suit_base_card(seeker_sign);
+    string suit = suit_base_card();
     string character = get_character();
-    seeker_base_card = character + " of " + suit;
+    string base_card = character + " of " + suit;
+
     return seeker_base_card;
 }
 

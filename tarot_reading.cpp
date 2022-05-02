@@ -36,6 +36,9 @@ int main() {
         //create the deck for this reading
         tarot_deck mythical_deck = tarot_deck("/Users/carolinecanfield/Desktop/card_definitions.txt");
 
+        //create an object of the spread class
+        spread reading_spread = spread();
+
         //input variables
         string name;
         int month;
@@ -110,10 +113,53 @@ int main() {
         string input;
 
         cout << "\n\nHazzuh! you are ready to pull cards!!" << endl;
-        cout << "All cards you will be pulling are from the top of the deck." << endl;
+        cout << "All cards you will be pulling are from the top of the deck." << endl << endl;
+
+        cout << "The first card will pertain to your past" << endl;
         cout << "To pull the first card you must enter the number 1: " << endl;
         cin >> input;
-        //pull
+        //pull the card from the deck
+        tarot_card past_card = mythical_deck.select_top_card();
+        //set the card to the past card in the spread
+        reading_spread.set_past(past_card);
+
+        //pull the second card
+        cout << "The second card will pertain to your present" << endl;
+        cout << "To pull the first card you must enter the number 1: " << endl;
+        cin >> input;
+        //pull the card from the deck
+        tarot_card present = mythical_deck.select_top_card();
+        //set the card to the past card in the spread
+        reading_spread.set_present(present);
+
+        cout << "The third card will pertain to your future" << endl;
+        cout << "To pull the first card you must enter the number 1: " << endl;
+        cin >> input;
+        //pull the card from the deck
+        tarot_card future = mythical_deck.select_top_card();
+        //set the card to the past card in the spread
+        reading_spread.set_future(future);
+
+        cout << "The fourth card will pertain to your current circumstances" << endl;
+        cout << "To pull the first card you must enter the number 1: " << endl;
+        cin >> input;
+        //pull the card from the deck
+        tarot_card cirum = mythical_deck.select_top_card();
+        //set the card to the past card in the spread
+        reading_spread.set_circum(cirum);
+
+        cout << "The fifth card will pertain to potential situations" << endl;
+        cout << "To pull the first card you must enter the number 1: " << endl;
+        cin >> input;
+        //pull the card from the deck
+        tarot_card pot_sit = mythical_deck.select_top_card();
+        //set the card to the past card in the spread
+        reading_spread.set_pot_solu(pot_sit);
+
+        //not deliver the readers information
+        reading_spread.print_results();
+
+
     }
 
 

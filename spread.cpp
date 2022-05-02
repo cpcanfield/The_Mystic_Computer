@@ -91,3 +91,12 @@ void spread::print_pot_solu(){
     cout << "Be weary of situations consisiting of  " << pot_solu_card.get_card_meaning() << endl;
 }
 
+//calls all print functions
+void spread::print_results(){
+    print_past();
+    print_present();
+    print_future();
+    print_circum();
+    print_pot_solu();
+}
+

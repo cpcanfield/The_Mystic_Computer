@@ -25,7 +25,7 @@ public:
 
 
     //functions to figure out the users base card
-    string calc_zodiac_sign(string);
+    string calc_zodiac_sign();
 
 
 
@@ -36,6 +36,7 @@ public:
     void set_age(int);
     void set_pref_gender(string);
     void set_sign(string);
+    void set_base_card();
 
     //getters
     int get_birth_month();
@@ -48,7 +49,7 @@ public:
 
 //functions to help calculate the users base card
 
-     string suit_base_card(string);
+     string suit_base_card();
      string get_character();
      string get_base_card();
 

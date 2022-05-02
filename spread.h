@@ -49,6 +49,7 @@ public:
     void print_future();
     void print_circum();
     void print_pot_solu();
+    void print_results();
 
 
 
