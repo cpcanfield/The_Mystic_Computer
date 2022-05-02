@@ -157,11 +157,20 @@ int main() {
         reading_spread.set_pot_solu(pot_sit);
 
         //not deliver the readers information
+
+        cout << "\nAt last! it is time to examine what your cards mean!" << endl << endl;
         reading_spread.print_results();
 
-
+        //promt to restart or end the program
+        cout << "Now... Would you like me to complete another reading? " << endl;
+        cout << "Type 'yes' if you would and anything to end this madness!!" << endl;
+        cin >> read_cards;
+        if (read_cards != "yes") {
+            cout << "\n\nWell, I see you are not interested in another reading." << endl;
+            cout << "I must say I am dissapointed, but I understand." << endl;
+            cout << "Take my wisdom I bestowed on you and go on!" << endl;
+        }
     }
-
 
     return 0;
 };
